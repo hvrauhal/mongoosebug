@@ -1,0 +1,14 @@
+{
+  "name": "mongoose-background-indexing-repro",
+  "version": "0.0.1",
+  "description": "Create some kitties, then db.kittens.dropIndexes(), then rerun",
+  "main": "mongooseapp.js",
+  "scripts": {
+    "test": "node mongooseapp.js && mongo mongoose-indexingbug --eval 'db.kittens.dropIndexes()' && node mongooseapp.js"
+  },
+  "dependencies": {
+    "async": "~0.2.5",
+    "lodash": "~1.0.1",
+    "mongoose": "~3.5.7"
+  }
+}
